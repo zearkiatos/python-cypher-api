@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "75b95f42-8136-4c0b-9193-1e829a443a6d",
+		"name": "CYPHER_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1347256"
+	},
+	"item": [
+		{
+			"name": "cipher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Pedro Capriles\",\n    \"key\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnZpcm9ubWVudCI6ImRldmVsb3BtZW50IiwiYXBwTmFtZSI6InB5dGhvbi1jeXBoZXItYXBpIn0.XJ7j0wSQcfq4xD572ezcwZb0cfmNfdRTPWte2Dbker8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{CYPHER_API_BASE_URL}}/cipher",
+					"host": [
+						"{{CYPHER_API_BASE_URL}}"
+					],
+					"path": [
+						"cipher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decipher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"C725D1E4947EBBC192B802880AD1\",\n    \"key\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnZpcm9ubWVudCI6ImRldmVsb3BtZW50IiwiYXBwTmFtZSI6InB5dGhvbi1jeXBoZXItYXBpIn0.XJ7j0wSQcfq4xD572ezcwZb0cfmNfdRTPWte2Dbker8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{CYPHER_API_BASE_URL}}/decipher",
+					"host": [
+						"{{CYPHER_API_BASE_URL}}"
+					],
+					"path": [
+						"decipher"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
