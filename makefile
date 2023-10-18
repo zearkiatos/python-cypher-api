@@ -20,9 +20,18 @@ docker-dev-up:
 docker-dev-down:
 	docker compose -f docker-compose.dev.yml down
 
+docker-up:
+	docker compose up --build
+
+docker-down:
+	docker compose down
+
 cipher-test:
-	docker exec -it apache-benchmark-server ab -n 1000 -c $(c) -p data/data-cifrar.json -T application/json -rk http://api:5000/cipher
+	docker exec -it apache-benchmark-server ab -n 1000 -c $(c) -p data/data-cifrar.json -T application/json -rk $(base_url)/cipher
 
 decipher-test:
-	docker exec -it apache-benchmark-server ab -n 1000 -c $(c) -p data/data-descifrar.json -T application/json -rk http://api:5000/decipher
+	docker exec -it apache-benchmark-server ab -n 1000 -c $(c) -p data/data-descifrar.json -T application/json -rk $(base_url)/decipher
+
+docker-gunicorn:
+	gunicorn --bind 0.0.0.0:$(port) app:app
 
