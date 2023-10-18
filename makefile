@@ -20,3 +20,9 @@ docker-dev-up:
 docker-dev-down:
 	docker compose -f docker-compose.dev.yml down
 
+cipher-test:
+	docker exec -it apache-benchmark-server ab -n 1000 -c $(c) -p data/data-cifrar.json -T application/json -rk http://api:5000/cipher
+
+decipher-test:
+	docker exec -it apache-benchmark-server ab -n 1000 -c $(c) -p data/data-descifrar.json -T application/json -rk http://api:5000/decipher
+

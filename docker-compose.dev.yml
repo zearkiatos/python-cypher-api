@@ -13,3 +13,15 @@ services:
     env_file:
       - .env.dev
     tty: true
+  ab:
+    build:
+      context: .
+      dockerfile: ab.Dockerfile
+    container_name: apache-benchmark-server
+    tty: true
+    links:
+      - api
+    depends_on:
+      - api
+
+    
