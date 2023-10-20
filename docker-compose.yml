@@ -16,6 +16,9 @@ services:
       context: .
       dockerfile: ab.Dockerfile
     container_name: apache-benchmark-server
+    volumes:
+      - "./reports:/home/data/reports"
+      - "./docker/template:/home/data/template"
     tty: true
     links:
       - api

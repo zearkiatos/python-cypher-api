@@ -7,4 +7,5 @@
 |**-n (requests)**            |Total number of requests to execute                                                    |
 |**-c (concurrency)**         |Quentity of concurrencies connections                                                  |
 |**-p (file.json)**           |JSON that sending in the body of the request                                           |
-|**-T (application/json)**    |Specifing the data struct of body                                                      |
+|**-T (application/json)**    |Specifying the data struct of body                                                     |
+|**-g (gnuplot-file)**        |Writing all values weight as a "gnuplot"                                               |
